@@ -1,0 +1,31 @@
+{
+  "compileOnSave": false,
+  "include": ["src/"],
+  "exclude": ["node_modules/", "dist/", "*.js", "*/**/*.js"],
+  "compilerOptions": {
+    "rootDir": ".",
+    "baseUrl": "./",
+    "outDir": "./dist",
+    "sourceMap": true,
+    "typeRoots": ["node_modules/@types"],
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2017",
+    "lib": ["es2018", "dom", "es2019.array"],
+    "types": ["node"],
+    "paths": {
+      "@config/*": ["src/config/*"],
+      "@discord/*": ["src/discord/*"],
+      "@hookOnline/*": ["src/hook-online/*"]
+    }
+  }
+}
