@@ -16,7 +16,10 @@
     "start": "run-p -c start:*",
     "start:hook-online": "ts-node -r tsconfig-paths/register src/hook-online/index.ts",
     "lint": "run-p -c lint:*",
-    "lint:pretty": "prettier 'src/**/*.{ts,scss,js,json,yml,md,html}' --list-different"
+    "lint:pretty": "prettier 'src/**/*.{ts,scss,js,json,yml,md,html}' --list-different",
+    "release:major": "changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && yarn version major && git push origin && git push origin --tags",
+    "release:minor": "changelog -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && yarn version minor && git push origin && git push origin --tags",
+    "release:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && yarn version patch && git push origin && git push origin --tags"
   },
   "dependencies": {
     "axios": "^0.21.1",
