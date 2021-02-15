@@ -34,7 +34,7 @@ try {
       });
 
       await onlineSubscription.stop();
-      process.exit(1);
+      process.exit(0);
     });
 
     async function cleanSubs() {
